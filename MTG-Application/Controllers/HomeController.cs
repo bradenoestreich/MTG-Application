@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using MTG_Application.Data;
 using MTG_Application.Models;
 using System;
 using System.Collections.Generic;
@@ -12,14 +13,17 @@ namespace MTG_Application.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private CardDbContext context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, CardDbContext dbContext)
         {
             _logger = logger;
+            context = dbContext;
         }
 
         public IActionResult Index()
         {
+            ViewBag.cards = context.Cards.ToList();
             return View();
         }
 
