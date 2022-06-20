@@ -4,9 +4,41 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome to Hypersonic</h1>
-    @foreach (Card card in ViewBag.cards)
-    {
-        <img src="@card.ImageUri" />
-        <p font-style: italic;>@card.Name by @card.Artist</p>
-    }
+    <div class="card-grid">
+        @foreach (Card card in ViewBag.cards)
+        {
+            <img src="@card.ImageUri" style="max-width:24%;height:auto;"/>
+        }  
+    </div>
+    
 </div>
+
+@*<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            @for (int i = 0; i < ViewBag.cards.Count; i += 4)
+            {
+                <img src="@ViewBag.cards[i].ImageUri" />
+            }
+        </div>
+        <div class="col-sm">
+            @for (int i = 1; i < ViewBag.cards.Count; i += 4)
+            {
+                <img src="@ViewBag.cards[i].ImageUri" />
+            }
+        </div>
+        <div class="col-sm">
+            @for (int i = 2; i < ViewBag.cards.Count; i += 4)
+            {
+                <img src="@ViewBag.cards[i].ImageUri" />
+            }
+        </div>
+        <div class="col-sm">
+            @for (int i = 3; i < ViewBag.cards.Count; i += 4)
+            {
+                <img src="@ViewBag.cards[i].ImageUri" />
+            }
+        </div>
+    </div>
+</div>*@
+

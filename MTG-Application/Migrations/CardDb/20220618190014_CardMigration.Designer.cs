@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MTG_Application.Migrations.CardDb
 {
     [DbContext(typeof(CardDbContext))]
-    [Migration("20220618172445_CardMigration")]
+    [Migration("20220618190014_CardMigration")]
     partial class CardMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

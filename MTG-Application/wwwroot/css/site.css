@@ -51,6 +51,18 @@ button.accept-policy {
   line-height: inherit;
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.card-grid {
+    display: block;
+    width: 100%;
+    padding: 0 2.5%;
+    margin: 20px 0 15px 0
+}
+
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
