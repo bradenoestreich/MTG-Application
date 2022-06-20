@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Collection Page";
+}
+
+@using MTG_Application.Models
+
+@model List<Card>
+
+<h1>My Collection</h1>
+<br />
+
+@if (Model.Count == 0)
+{
+    <p>No cards in collection!</p>
+}
+else
+{
+    <table class="table">
+        <tr>
+            <th>
+                Card Number
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Prices
+            </th>
+        </tr>
+        @foreach (var card in Model)
+        {
+            <tr>
+                <td>@card.Id</td>
+                <td>@card.Name</td>
+                <td>@card.Prices</td>
+            </tr>
+        }
+    </table>  
+}
