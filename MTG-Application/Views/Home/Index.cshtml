@@ -2,10 +2,14 @@
     ViewData["Title"] = "Home Page";
 }
 
+@using MTG_Application.Models
+
+@model List<Card>
+
 <div class="text-center">
     <h1 class="display-4">Welcome to Hypersonic</h1>
     <div class="card-grid">
-        @foreach (Card card in ViewBag.cards)
+        @foreach (Card card in Model)
         {
             <img src="@card.ImageUri" style="max-width:24%;height:auto;"/>
         }  

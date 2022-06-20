@@ -23,8 +23,8 @@ namespace MTG_Application.Controllers
 
         public IActionResult Index()
         {
-            ViewBag.cards = context.Cards.ToList();
-            return View();
+            List<Card> cards = new List<Card>(context.Cards.ToList());
+            return View(cards);
         }
 
         public IActionResult Privacy()
