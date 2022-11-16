@@ -13,9 +13,9 @@ namespace MTG_Application.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private CardDbContext context;
+        private ApplicationDbContext context;
 
-        public HomeController(ILogger<HomeController> logger, CardDbContext dbContext)
+        public HomeController(ILogger<HomeController> logger, ApplicationDbContext dbContext)
         {
             _logger = logger;
             context = dbContext;
